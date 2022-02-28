@@ -76,6 +76,12 @@ RCT_EXPORT_METHOD(showChatWithPhone: (NSString *) phoneNumber)
   NSLog(@"showChatWithPhone");
 }
 
+RCT_EXPORT_METHOD(setLanguage: (NSString *) language)
+{
+  NSLog(@"setLanguage @%@", language);
+  [AppDelegate.sharedInstance.sdk setLanguageWithLanguage:language];
+}
+
 RCT_EXPORT_METHOD(openChatWithUser: (NSString *)userId
                   fullName: (NSString *)fullName
                   avatarId: (NSString *)avatarId
@@ -92,6 +98,8 @@ RCT_EXPORT_METHOD(openChatWithUser: (NSString *)userId
 
 RCT_EXPORT_METHOD(logOut)
 {
+  //Call this to logout sdk
+  NSLog(@"Log out");
 //  [AppDelegate.sharedInstance.sdk logout];
 }
 

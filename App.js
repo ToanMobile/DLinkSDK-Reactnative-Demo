@@ -34,15 +34,15 @@ const App = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <Button style={[styles.button]} title="Back" onPress={() => { setIsSelect(false) }} />
-        <Text style={styles.bigtitle}>NetAloSDK Demo React Native</Text>
+        <Text style={styles.bigtitle}>DLink Demo React Native</Text>
         <View style={styles.marginTitle} />
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={[styles.button]}
           onPress={() => {
             NetAloSDK.setDomainLoadAvatarNetAloSdk("your_cdn");
           }}>
           <Text style={styles.title}>Init Config URL Avatar</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         {!isSelect ? (
           <View>
             <View style={styles.margin} />
@@ -92,9 +92,20 @@ const App = () => {
           <View>
             <TouchableOpacity
               style={[styles.button]}
-              onPress={() => NetAloSDK.showListConversations()}
+              onPress={() => NetAloSDK.setLanguage("en")}
             >
-              <Text style={styles.title}>List Conversations Create Group</Text>
+              <Text style={styles.title}>Set Language EN</Text>
+            </TouchableOpacity>
+            <View style={styles.margin} />
+          </View>
+        ) : null}
+        {isSelect && (shouldShowA || shouldShowB) ? (
+          <View>
+            <TouchableOpacity
+              style={[styles.button]}
+              onPress={() => NetAloSDK.setLanguage("vi")}
+            >
+              <Text style={styles.title}>Set Language VN</Text>
             </TouchableOpacity>
             <View style={styles.margin} />
           </View>
