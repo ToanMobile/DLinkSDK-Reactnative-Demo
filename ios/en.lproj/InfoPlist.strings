@@ -1,0 +1,20 @@
+/* 
+  InfoPlist.strings
+  TestReactNativeV4
+
+  Created by Hieu Bui Van  on 28/02/2022.
+  
+*/
+
+"NSCameraUsageDescription"                     = "Sending photo and video call";
+"NSContactsUsageDescription"                   = "DLink will continously upload your contacts to its heavily encrypted cloud servers to let you connect with your friends quickly";
+"NSMicrophoneUsageDescription"                 = "Using voice call";
+"NSPhotoLibraryUsageDescription"               = "Please allow access to save and share photo in your photo library";
+"NSLocationWhenInUseUsageDescription"          = "If you’d like to share your Location with friends, DLink needs location access to use this feature";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "If you’d like to share your Location with friends, DLink needs location access to use this feature";
+"NSLocationAlwaysUsageDescription"             = "If you’d like to share your Live Location with friends, DLink needs location access when the app is in background";
+"NSUserTrackingUsageDescription"               = "Your data will be used to provide you a better and personalized ad experience";
+
+
+
+

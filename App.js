@@ -46,7 +46,7 @@ const App = () => {
         {!isSelect ? (
           <View>
             <View style={styles.margin} />
-            <Text>NetAloSDK Demo Application, Please select user:</Text>
+            <Text>DLink Demo Application, Please select user:</Text>
             <View style={styles.marginButton} />
             <TouchableOpacity
               style={[styles.button]}
