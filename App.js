@@ -52,12 +52,12 @@ const App = () => {
               style={[styles.button]}
               onPress={() => {
                 NetAloSDK.setUser(
-                  "4785074604085462",
-                  "7c922a7b662184b39ae47ca486c14cf028f371ce" ,
-                  "Nguyễn Mai Hương",
-                  "Attachments/f91f5ef2-fa03-4d73-b549-60b6ca3c90a0_332CF1D4-8681-4EAF-9EC7-5BB42E8AF5EF.jpg",
+                  "4785074617331968",
+                  "381118bd76901c806a4c815696358033ee9cf2c0" ,
+                  "ipa\\dlink.netacom",
                   "",
-                  "maihuong1497"
+                  "",
+                  "ipa\\dlink.netacom"
                 );
                 setIsSelect(true);
                 setShouldShowA(false);
