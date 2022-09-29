@@ -44,9 +44,9 @@ target 'TestReactNativeV4' do
   pod 'Curve25519Kit', :build_type => :dynamic_framework, git: 'https://github.com/signalapp/Curve25519Kit'
   pod 'GRKOpenSSLFramework', :build_type => :dynamic_framework, git: 'https://github.com/signalapp/GRKOpenSSLFramework', branch: 'mkirk/1.0.2t'
   pod 'Socket.IO-Client-Swift', '14.0.0', :build_type => :dynamic_framework
-  
-  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v1'
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v1'
+  pod 'lottie-ios', '3.2.3', :build_type => :dynamic_framework
+  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v8'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v8'
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
@@ -66,7 +66,7 @@ target 'NotificationExtension' do
   pod 'Curve25519Kit', :build_type => :dynamic_framework, git: 'https://github.com/signalapp/Curve25519Kit'
   pod 'GRKOpenSSLFramework', :build_type => :dynamic_framework, git: 'https://github.com/signalapp/GRKOpenSSLFramework', branch: 'mkirk/1.0.2t'
   pod 'Socket.IO-Client-Swift', '14.0.0', :build_type => :dynamic_framework
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v1'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v8'
   pod 'RxSwift', '~> 6.2.0', :build_type => :dynamic_framework
   pod 'RxCocoa', '~> 6.2.0', :build_type => :dynamic_framework
   pod 'RxRelay', '~> 6.2.0', :build_type => :dynamic_framework
@@ -80,6 +80,7 @@ post_install do |installer|
     target.build_configurations.each do |config|
       config.build_settings['ENABLE_BITCODE'] = 'NO'
       config.build_settings['ARCHS'] = 'arm64 x86_64'
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
     end
   end
 end

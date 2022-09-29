@@ -33,7 +33,7 @@ static void InitializeFlipper(UIApplication *application) {
 /*
  Init Netalo SDKs and config parameters
  Description enviroment:
-  - testing    = 1
+  - developer  = 0
   - production = 2
  */
 - (instancetype)init
@@ -41,35 +41,36 @@ static void InitializeFlipper(UIApplication *application) {
   self = [super init];
   if (self) {
     NetaloConfiguration *config = [[NetaloConfiguration alloc]
-                                  initWithEnviroment:2
-                                  appId:17
-                                  appKey:@"B2D89AC8B8ECF"
-                                  accountKey:@"adminkey"
-                                  appGroupIdentifier:@"group.vn.com.vndirect.stockchat"
-                                  allowSyncDataInApp:YES
-                                  allowSyncContactInApp:YES
-                                  userProfileUrl:@"abc.vn"
-                                  allowCustomUsername:NO
-                                  forceUpdateProfile:YES
-                                  allowCustomProfile:NO
-                                  allowSetUserProfileUrl:NO
-                                  allowAddContact:NO
-                                  allowBlockContact:YES
-                                  isVideoCallEnable:YES
-                                  isVoiceCallEnable:YES
-                                  isHiddenSecretChat: YES
-                                  allowLocationEnable:YES
-                                  allowTrackingUsingSDK:NO
-                                  enableUserStatusInChat:YES
-                                  allowTrackingBadgeNumber:NO
-                                  isHiddenEditProfile: NO
-                                  allowEditContact: NO
-                                  searchByLike:TRUE
-                                  allowReferralCode: NO
-                                  allowReplaceCountrycode: NO];
+                                   initWithEnviroment:0
+                                   appId:17
+                                   appKey:@"B2D89AC8B8ECF"
+                                   accountKey:@"adminkey"
+                                   appGroupIdentifier: @"group.vn.netacom.vndirect-dev"
+                                   storeUrl:@"https://apps.apple.com/vn/app/vndirect/id1594533471"
+                                   forceUpdateProfile:YES
+                                   allowCustomUsername:YES
+                                   allowCustomProfile:NO
+                                   allowCustomAlert:NO
+                                   allowAddContact:YES
+                                   allowBlockContact:YES
+                                   allowSetUserProfileUrl:NO
+                                   allowEnableLocationFeature:NO
+                                   allowTrackingUsingSDK:NO
+                                   isHiddenEditProfile:YES
+                                   allowAddNewContact:NO
+                                   allowEditContact:NO
+                                   isVideoCallEnable:YES
+                                   isVoiceCallEnable:YES
+                                   isHiddenSecretChat:YES
+                                   isSyncDataInApp:YES
+                                   allowReferralCode:NO
+                                   searchByLike:YES
+                                   allowReplaceCountrycode:NO
+                                   isSyncContactInApp:YES
+                                   permissions:@[[NSNumber numberWithInt:1]]
+    ];
    
     _sdk = [[NetAloFull alloc] initWithConfig:config];
-
   }
   
   return self;

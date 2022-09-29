@@ -54,7 +54,9 @@ RCT_EXPORT_METHOD(setUser: (NSString *) userId
 
 RCT_EXPORT_METHOD(showListConversations)
 {
-  [AppDelegate.sharedInstance.sdk showVNDemoVC];
+  [AppDelegate.sharedInstance.sdk showVNDemoVCWithCompletion:^(NSError * _Nullable) {
+
+  }];
 }
 
 RCT_EXPORT_METHOD(showChatWithUser: (NSString *) userId
@@ -68,12 +70,34 @@ RCT_EXPORT_METHOD(showChatWithUser: (NSString *) userId
    phone:phoneNumber
    fullName:fullName
    email:NULL
-   profileUrl:avatarId];
+   profileUrl:avatarId
+   completion:^(NSError * _Nullable) {
+    
+  }];
 }
 
 RCT_EXPORT_METHOD(showChatWithPhone: (NSString *) phoneNumber)
 {
   NSLog(@"showChatWithPhone");
+}
+
+
+RCT_EXPORT_METHOD(showCallUserWith: (NSString *) userId
+                  avatarId: (NSString *)avatarId
+                  fullName: (NSString *)fullName
+                  email: (NSString *)email
+                  isVideoCall: (BOOL)isVideoCall
+                  phoneNumber: (NSString *)phoneNumber)
+{
+  [AppDelegate.sharedInstance.sdk showCallUserWith: [userId integerValue]
+                                             phone: phoneNumber
+                                          fullName: fullName
+                                             email: email
+                                        profileUrl: avatarId
+                                       isVideoCall: isVideoCall
+                                        completion:^(NSError * _Nullable) {
+    
+  }];
 }
 
 RCT_EXPORT_METHOD(setLanguage: (NSString *) language)
@@ -93,7 +117,10 @@ RCT_EXPORT_METHOD(openChatWithUser: (NSString *)userId
    phone:phoneNumber
    fullName:fullName
    email:email
-   profileUrl:avatarId];
+   profileUrl:avatarId
+   completion:^(NSError * _Nullable) {
+    
+  }];
 }
 
 RCT_EXPORT_METHOD(logOut)
