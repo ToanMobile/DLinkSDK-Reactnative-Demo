@@ -7,6 +7,6 @@
 
 + (AppDelegate *) sharedInstance;
 @property (nonatomic, strong) UIWindow *window;
-@property (nonatomic, strong) NetAloFull *sdk;
+@property (nonatomic, strong) NetAloFullManager *sdk;
 
 @end

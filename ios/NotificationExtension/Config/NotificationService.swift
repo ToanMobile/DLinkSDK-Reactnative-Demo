@@ -16,7 +16,7 @@ class NotificationService: UNNotificationServiceExtension {
     var bestAttemptContent: UNMutableNotificationContent?
     
     private var disposeBag = DisposeBag()
-    @LazyInjected private var notificationRepo: NotificationComponent
+    @LazyInjected private var notificationRepo: NotificationComponentProtocol
     
     override init() {
         super.init()

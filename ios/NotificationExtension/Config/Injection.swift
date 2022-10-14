@@ -8,9 +8,9 @@
 import Resolver
 import NotificationComponent
 
-extension Resolver: ResolverRegistering {
+extension MyResolver: ResolverRegistering {
     public static func registerAllServices() {
-        register { NotificationComponentImpl(enviroment: BuildConfig.enviroment, appGroupId: BuildConfig.appGroupId) as NotificationComponent }
+        register { NotificationComponentImpl(enviroment: BuildConfig.enviroment, appGroupId: BuildConfig.appGroupId) as NotificationComponentProtocol }
             .scope(.cached)
     }
 }

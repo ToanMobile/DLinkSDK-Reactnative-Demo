@@ -70,7 +70,7 @@ static void InitializeFlipper(UIApplication *application) {
                                    permissions:@[[NSNumber numberWithInt:1]]
     ];
    
-    _sdk = [[NetAloFull alloc] initWithConfig:config];
+    _sdk = [[NetAloFullManager alloc] initWithConfig:config];
   }
   
   return self;
