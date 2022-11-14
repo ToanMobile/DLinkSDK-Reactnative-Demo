@@ -10,7 +10,7 @@ import NotificationComponent
 
 extension MyResolver: ResolverRegistering {
     public static func registerAllServices() {
-        register { NotificationComponentImpl(enviroment: BuildConfig.enviroment, appGroupId: BuildConfig.appGroupId) as NotificationComponentProtocol }
+        register { NotificationComponentImpl(enviroment: BuildConfig.enviroment, appGroupId: BuildConfig.appGroupId) as NotificationComponentImpl }
             .scope(.cached)
     }
 }

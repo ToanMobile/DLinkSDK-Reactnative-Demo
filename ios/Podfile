@@ -4,16 +4,18 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 plugin 'cocoapods-user-defined-build-types'
 enable_user_defined_build_types!
 
-platform :ios, '11.0'
+platform :ios, '12.0'
 
 # ======================================GROUP PODS==========================================
 def netalo_pods
-  pod 'NetacomSDKs', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.0'
+  pod 'NetacomSDKs', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.2'
+
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-  pod 'NotificationSDK', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.0'
+   pod 'NotificationSDK', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.2'
+   pod 'WebRTC', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/WebRTC-iOS', branch: 'main'
 end
 
 def resolver
@@ -22,8 +24,7 @@ end
 
 # ======================================TARGET PODS==========================================
 def app_pods
-  pod 'MessageKit', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/Messagekit-iOS'
-  pod 'SwiftLinkPreview', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/SwiftLinkPreview', branch: 'dev_1.0'
+   pod 'MessageKit', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/Messagekit-iOS', branch: 'main'
   resolver
   netalo_pods
 end
@@ -61,13 +62,13 @@ target 'NotificationExtension' do
   app_notification_pods
 end
 
-post_install do |installer|
-  react_native_post_install(installer)
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['ENABLE_BITCODE'] = 'NO'
-      config.build_settings['ARCHS'] = 'arm64 x86_64'
-      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-    end
-  end
-end
+ post_install do |installer|
+   react_native_post_install(installer)
+   installer.pods_project.targets.each do |target|
+     target.build_configurations.each do |config|
+       config.build_settings['ENABLE_BITCODE'] = 'NO'
+       config.build_settings['ARCHS'] = 'arm64 x86_64'
+       config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+     end
+   end
+ end

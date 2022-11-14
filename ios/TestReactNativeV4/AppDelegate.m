@@ -40,39 +40,40 @@ static void InitializeFlipper(UIApplication *application) {
 {
   self = [super init];
   if (self) {
-    NetaloConfiguration *config = [[NetaloConfiguration alloc]
-                                   initWithEnviroment:0
-                                   appId:17
-                                   appKey:@"B2D89AC8B8ECF"
-                                   accountKey:@"adminkey"
-                                   appGroupIdentifier: @"group.vn.netacom.vndirect-dev"
-                                   storeUrl:@"https://apps.apple.com/vn/app/vndirect/id1594533471"
-                                   forceUpdateProfile:YES
-                                   allowCustomUsername:YES
-                                   allowCustomProfile:NO
-                                   allowCustomAlert:NO
-                                   allowAddContact:YES
-                                   allowBlockContact:YES
-                                   allowSetUserProfileUrl:NO
-                                   allowEnableLocationFeature:NO
-                                   allowTrackingUsingSDK:NO
-                                   isHiddenEditProfile:YES
-                                   allowAddNewContact:NO
-                                   allowEditContact:NO
-                                   isVideoCallEnable:YES
-                                   isVoiceCallEnable:YES
-                                   isHiddenSecretChat:YES
-                                   isSyncDataInApp:YES
-                                   allowReferralCode:NO
-                                   searchByLike:YES
-                                   allowReplaceCountrycode:NO
-                                   isSyncContactInApp:YES
-                                   permissions:@[[NSNumber numberWithInt:1]]
-    ];
-   
-    _sdk = [[NetAloFullManager alloc] initWithConfig:config];
-  }
-  
+    NetaloConfigurationObjc *config = [[NetaloConfigurationObjc alloc]
+                                           initWithEnviroment:2
+                                           appId:17
+                                           appKey:@"B2D89AC8B8ECF"
+                                           accountKey:@"adminkey"
+                                           appGroupIdentifier: @"group.vn.netacom.vndirect-dev"
+                                           storeUrl:@"https://apps.apple.com/vn/app/vndirect/id1594533471"
+                                           forceUpdateProfile:YES
+                                           allowCustomUsername:YES
+                                           allowCustomProfile:NO
+                                           allowCustomAlert:NO
+                                           allowAddContact:YES
+                                           allowBlockContact:YES
+                                           allowSetUserProfileUrl:NO
+                                           allowEnableLocationFeature:NO
+                                           allowTrackingUsingSDK:NO
+                                           isHiddenEditProfile:YES
+                                           allowAddNewContact:NO
+                                           allowEditContact:NO
+                                           isVideoCallEnable:YES
+                                           isVoiceCallEnable:YES
+                                           isHiddenSecretChat:YES
+                                           isSyncDataInApp:YES
+                                           allowReferralCode:NO
+                                           searchByLike:YES
+                                           allowReplaceCountrycode:NO
+                                           isSyncContactInApp:YES
+                                           permissions:@[[NSNumber numberWithInt:1]]
+                                           userProfileUrl: @""
+                                           isLoggingEnable: YES
+            ];
+        
+            _sdk = [[NetAloFullManager alloc] initWithConfig:config.netaloConfiguration];
+      }
   return self;
 }
 
