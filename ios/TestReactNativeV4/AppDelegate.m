@@ -41,7 +41,7 @@ static void InitializeFlipper(UIApplication *application) {
   self = [super init];
   if (self) {
     NetaloConfiguration *config = [[NetaloConfiguration alloc]
-                                   initWithEnviroment:0
+                                   initWithEnviroment:2
                                    appId:17
                                    appKey:@"B2D89AC8B8ECF"
                                    accountKey:@"adminkey"

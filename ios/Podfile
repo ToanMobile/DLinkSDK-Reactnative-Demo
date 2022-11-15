@@ -28,9 +28,9 @@ target 'TestReactNativeV4' do
   pod 'RxRelay', '~> 6.2.0', :build_type => :dynamic_framework
   pod 'JitsiMeetSDK', :build_type => :dynamic_framework, git: 'https://github.com/Netacom-NetAlo/JitsiSDK-iOS.git', branch: 'dev_1.2'
   pod 'Resolver', :build_type => :dynamic_framework, git: 'https://github.com/thanhphong-tran/Resolver'
-  pod 'MessageKit', :build_type => :dynamic_framework, :git => 'https://github.com/thanhphong-tran/messagekit'
+  pod 'MessageKit', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/Messagekit-iOS'
   pod 'SwiftLinkPreview', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/SwiftLinkPreview', branch: 'dev_1.0'
-  pod 'Localize-Swift', :build_type => :dynamic_framework, :git => 'https://github.com/thanhphong-tran/Localize-Swift'
+  pod 'Localize-Swift', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/Localize-iOS'
   pod 'Kingfisher', '~> 6.1.1', :build_type => :dynamic_framework
   # Local database
   pod 'RealmSwift', '10.12.0', :build_type => :dynamic_framework
@@ -45,8 +45,8 @@ target 'TestReactNativeV4' do
   pod 'GRKOpenSSLFramework', :build_type => :dynamic_framework, git: 'https://github.com/signalapp/GRKOpenSSLFramework', branch: 'mkirk/1.0.2t'
   pod 'Socket.IO-Client-Swift', '14.0.0', :build_type => :dynamic_framework
   pod 'lottie-ios', '3.2.3', :build_type => :dynamic_framework
-  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'vnd/sdk_main_v8'
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v8'
+  pod 'NetacomSDKs', :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', branch: 'demo/sdk_main_v14'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'demo/sdk_noti_v14'
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
@@ -56,7 +56,7 @@ end
 
 
 target 'NotificationExtension' do
-  pod 'Localize-Swift', :build_type => :dynamic_framework, :git => 'https://github.com/thanhphong-tran/Localize-Swift'
+  pod 'Localize-Swift', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/Localize-iOS'
   pod 'RealmSwift', '10.12.0', :build_type => :dynamic_framework
   pod 'ZIPFoundation', '~> 0.9', :build_type => :dynamic_framework
   # Secret chat
@@ -66,7 +66,7 @@ target 'NotificationExtension' do
   pod 'Curve25519Kit', :build_type => :dynamic_framework, git: 'https://github.com/signalapp/Curve25519Kit'
   pod 'GRKOpenSSLFramework', :build_type => :dynamic_framework, git: 'https://github.com/signalapp/GRKOpenSSLFramework', branch: 'mkirk/1.0.2t'
   pod 'Socket.IO-Client-Swift', '14.0.0', :build_type => :dynamic_framework
-  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'vnd/sdk_noti_v8'
+  pod 'NotificationSDK', :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', branch: 'demo/sdk_noti_v14'
   pod 'RxSwift', '~> 6.2.0', :build_type => :dynamic_framework
   pod 'RxCocoa', '~> 6.2.0', :build_type => :dynamic_framework
   pod 'RxRelay', '~> 6.2.0', :build_type => :dynamic_framework
