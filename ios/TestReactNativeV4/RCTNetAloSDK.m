@@ -54,7 +54,7 @@ RCT_EXPORT_METHOD(setUser: (NSString *) userId
 
 RCT_EXPORT_METHOD(showListConversations)
 {
-  [AppDelegate.sharedInstance.sdk showVNDemoVCWithCompletion:^(NSError * _Nullable) {
+  [AppDelegate.sharedInstance.sdk showListGroupWithCompletion:^(NSError * _Nullable) {
 
   }];
 }

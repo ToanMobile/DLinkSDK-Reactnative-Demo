@@ -58,7 +58,9 @@ static void InitializeFlipper(UIApplication *application) {
                                            allowTrackingUsingSDK:NO
                                            isHiddenEditProfile:YES
                                            allowAddNewContact:NO
-                                           allowEditContact:NO
+                                           hideContactInfo:NO
+                                           allowCreateGroup:NO
+                                           allowSearchContact:NO
                                            isVideoCallEnable:YES
                                            isVoiceCallEnable:YES
                                            isHiddenSecretChat:YES
@@ -69,7 +71,6 @@ static void InitializeFlipper(UIApplication *application) {
                                            isSyncContactInApp:YES
                                            permissions:@[[NSNumber numberWithInt:1]]
                                            userProfileUrl: @""
-                                           isLoggingEnable: YES
             ];
         
             _sdk = [[NetAloFullManager alloc] initWithConfig:config.netaloConfiguration];
