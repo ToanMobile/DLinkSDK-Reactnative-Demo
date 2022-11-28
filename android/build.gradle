@@ -2,29 +2,26 @@
 
 buildscript {
     ext {
-        kotlin_version = '1.5.30'
-        hilt_version = '2.38.1'
-        sdkNetAlo_version = '2.0.13'
-        buildToolsVersion = "30.0.3"
+        buildToolsVersion = "30.0.0"
         minSdkVersion = 23
-        compileSdkVersion = 30
-        targetSdkVersion = 29
-        supportLibVersion = "30.0.3"
+        compileSdkVersion = 33
+        targetSdkVersion = 30
+        ndkVersion = "20.1.5948944"
+        //SDK
+        kotlin_version = '1.6.21'
+        hilt_version = '2.42'
+        sdkNetAlo_version = '3.1.37'
     }
     repositories {
         google()
         mavenCentral()
-        mavenLocal()
-        jcenter()
-        gradlePluginPortal()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.2.2")
+        classpath("com.android.tools.build:gradle:7.3.1")
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
-        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.13.4'
-        classpath "com.google.gms:google-services:4.3.10"
-        classpath "com.google.firebase:firebase-crashlytics-gradle:2.7.1"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
@@ -46,5 +43,7 @@ allprojects {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
         }
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://github.com/Netacom-NetAlo/NetaloSDKs-Android/raw/main/NetAloSDK' }
     }
 }

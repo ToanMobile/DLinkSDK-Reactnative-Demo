@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "react": "17.0.2",
-    "react-native": "^0.64.2",
-    "react-native-onesignal": "^4.3.0"
+    "react-native": "0.65.1"
   },
   "devDependencies": {
     "@babel/core": "7.13.15",

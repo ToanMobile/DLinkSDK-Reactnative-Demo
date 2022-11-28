@@ -164,9 +164,10 @@ public class MainApplication extends Application implements ReactApplication, Co
         boolean hideAddInfoInChat = true;
         boolean hideInfoInChat = true;
         boolean hideCallInChat = true;
+        boolean hideSearch = true;
         String classMainActivity = MainActivity.class.getName();
         this.sdkConfig = new SdkConfig(appId, appKey, accountKey, classMainActivity, isSyncContact, hidePhone,
-                hideCreateGroup, hideAddInfoInChat, hideInfoInChat, hideCallInChat);
+                hideCreateGroup, hideAddInfoInChat, hideInfoInChat, hideCallInChat, hideSearch);
         this.sdkTheme = new NeTheme("#00B14F", "#D6F3E2", "#683A00", "#00B14F");
     }
 }
