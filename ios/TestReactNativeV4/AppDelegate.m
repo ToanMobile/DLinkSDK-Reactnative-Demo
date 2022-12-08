@@ -71,6 +71,8 @@ static void InitializeFlipper(UIApplication *application) {
                                            isSyncContactInApp:YES
                                            permissions:@[[NSNumber numberWithInt:1]]
                                            userProfileUrl: @""
+                                           isGroupCallEnable:NO
+                                           allowAddGroupMember:NO
             ];
         
             _sdk = [[NetAloFullManager alloc] initWithConfig:config.netaloConfiguration];
