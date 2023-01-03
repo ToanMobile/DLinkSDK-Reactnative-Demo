@@ -8,13 +8,13 @@ platform :ios, '12.0'
 
 # ======================================GROUP PODS==========================================
 def netalo_pods
-  pod 'NetacomSDKs', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.3'
+  pod 'NetacomSDKs', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/NetaloSDKs-iOS', tag: '0.1.4'
 
   noti_netalo_pods
 end
 
 def noti_netalo_pods
-   pod 'NotificationSDK', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.3'
+   pod 'NotificationSDK', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/NotiSDKs-iOS', tag: '0.1.4'
    pod 'WebRTC', :build_type => :dynamic_framework, :git => 'https://github.com/Netacom-NetAlo/WebRTC-iOS', branch: 'main'
 end
 
