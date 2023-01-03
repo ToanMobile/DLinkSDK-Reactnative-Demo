@@ -8,7 +8,6 @@
 
 import React, { Component, useState } from "react";
 import { NativeModules } from "react-native";
-import OneSignal from 'react-native-onesignal';
 import {
   StyleSheet,
   Text,
@@ -27,8 +26,6 @@ const App = () => {
   const [isSelect, setIsSelect] = useState(false);
   const [shouldShowA, setShouldShowA] = useState(false);
   const [shouldShowB, setShouldShowB] = useState(false);
-  // OneSignal.setLogLevel(6, 0);
-  // OneSignal.setAppId("9ace9559-83bc-4a60-a2df-f297bbf16a42");
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -71,12 +68,12 @@ const App = () => {
               style={[styles.button]}
               onPress={() => {
                 NetAloSDK.setUser(
-                  "4785074617325473",
-                  "a459ae8d28d58f1a98831a3f55fa4aebfc40e85d" ,
-                  "quynhanh141997",
+                  "4785074617709103",
+                  "045626a0acadb8dd4365991965a1c9bc1378Hvns" ,
+                  "ToanMobile",
                   "",
                   "",
-                  "quynhanh141997"
+                  "ToanMobile"
                 );
                 setIsSelect(true);
                 setShouldShowA(!shouldShowA);

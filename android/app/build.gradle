@@ -115,7 +115,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
-apply from: "../../node_modules/react-native/react.gradle"
+//apply from: "../../node_modules/react-native/react.gradle"
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
@@ -206,16 +206,16 @@ dependencies {
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
-        exclude group: 'com.facebook.fbjni'
+      exclude group:'com.facebook.fbjni'
     }
 
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
-        exclude group: 'com.facebook.flipper'
-        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+        exclude group:'com.facebook.flipper'
+        exclude group:'com.squareup.okhttp3', module:'okhttp'
     }
 
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
-        exclude group: 'com.facebook.flipper'
+        exclude group:'com.facebook.flipper'
     }
 
     if (enableHermes) {
@@ -229,9 +229,7 @@ dependencies {
     //SDK
     //debugImplementation "vn.netacom:NetAloFull-Dev:$sdkNetAlo_version" //(for dev)
     //releaseImplementation "vn.netacom:NetAloFull:$sdkNetAlo_version" //(for production)
-    implementation("vn.netacom:NetAloFull:$sdkNetAlo_version") {
-        exclude group: 'com.github.bumptech.glide', module: 'glide'
-    }//(for production)
+    implementation("vn.netacom:NetAloFull:$sdkNetAlo_version") //(for production)
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation "androidx.hilt:hilt-work:1.0.0"
